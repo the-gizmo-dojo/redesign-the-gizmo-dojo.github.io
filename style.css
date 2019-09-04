@@ -59,6 +59,10 @@ hr {
   margin: 0 auto;
 }
 
+.display-4{
+  font-size: 200%;
+}
+
 .social a {
   font-size: 4.5em;
   padding: 3rem;
@@ -190,7 +194,13 @@ figure {
     padding: 1rem;
 }
 
+.member {
+  padding-right: 3rem;
+}
 
+.class {
+  padding-left: 3rem;
+}
 
 
 
