@@ -80,15 +80,16 @@ hr {
 .fa-meetup {
   color: #e0393e;
 }
-.fa-paypal {
-  color: #003087;
+.fa-instagram {
+  color: #dd2a7b;
 }
 
 .fa-envelope:hover,
 .fa-facebook:hover,
 .fa-github:hover,
 .fa-meetup:hover,
-.fa-paypal:hover {
+.fa-paypal:hover,
+.fa-instagram:hover {
   color: #d5d5d5;
 }
 
