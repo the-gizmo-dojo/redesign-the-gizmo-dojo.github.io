@@ -24,19 +24,19 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="#welcome">Welcome</a>
+					<a class="nav-link scrollLink" href="#welcome" >Welcome</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#space">About the space</a>
+					<a class="nav-link scrollLink" href="#space" >About the space</a>
 				</li>
 <!-- 				<li class="nav-item">
-					<a class="nav-link" href="#team">Our team</a>
+					<a class="nav-link scrollLink" href="#team" >Our team</a>
 				</li> -->
 				<li class="nav-item">
-					<a class="nav-link" href="#join">Join us</a>
+					<a class="nav-link scrollLink" href="#join" >Join us</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#connect">Connect</a>
+					<a class="nav-link scrollLink" href="#connect" >Connect</a>
 				</li>
 			</ul>
 		</div>
@@ -283,6 +283,16 @@
 <p>
 Images by <a href="https://pixabay.com/users/picjumbo_com-2130229/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=864983">free stock photos from www.picjumbo.com</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=864983">Pixabay</a></p>
 --->
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$( "a.scrollLink" ).click(function( event ) {
+		    event.preventDefault();
+		    $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 250);
+		});
+	});
+</script>
+
 </body>
 </html>
 
