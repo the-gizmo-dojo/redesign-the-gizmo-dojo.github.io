@@ -1,14 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #222;
 }
 
 .navbar {
-  padding: .8rem;
+  padding: 0.8rem;
 }
 .navbar-nav li {
   padding-right: 20px;
@@ -47,10 +48,15 @@ html, body {
   padding-top: 2rem;
 }
 
+.faint a:link { color: #666; }
+.faint a:visited { color: #666; }
+.faint a:hover { color: #666; }
+.faint a:active { color: #666; }
+
 hr {
   border-top: 2px solid #b4b4b4;
   width: 95%;
-  margin-top: .3rem;
+  margin-top: 0.3rem;
   margin-bottom: 1rem;
 }
 
@@ -59,7 +65,7 @@ hr {
   margin: 0 auto;
 }
 
-.display-4{
+.display-4 {
   font-size: 200%;
 }
 
@@ -102,7 +108,7 @@ footer {
 hr.light {
   border-top: 1px solid #d5d5d5;
   width: 75%;
-  margin-top: .8rem;
+  margin-top: 0.8rem;
   margin-bottom: 1rem;
 }
 
@@ -118,40 +124,35 @@ footer a {
   }
 }
 @media (max-width: 768px) {
-
-.carousel-caption {
-  top: 40%;
-}
-.carousel-caption h1 {
-  font-size: 350%;;
-}
-.carousel-caption h3 {
-  font-size: 140%;
-  font-weight: 400;
-  padding-bottom: .2rem;
-}
-.display-4 {
-  font-size: 200%;
-}
-  
+  .carousel-caption {
+    top: 40%;
+  }
+  .carousel-caption h1 {
+    font-size: 350%;
+  }
+  .carousel-caption h3 {
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom: 0.2rem;
+  }
+  .display-4 {
+    font-size: 200%;
+  }
 }
 @media (max-width: 576px) {
- 
-.carousel-caption {
-  top: 40%;
+  .carousel-caption {
+    top: 40%;
+  }
+  .carousel-caption h1 {
+    font-size: 250%;
+  }
+  .carousel-caption h3 {
+    font-size: 110%;
+  }
+  .display-4 {
+    font-size: 200%;
+  }
 }
-.carousel-caption h1 {
-  font-size: 250%;;
-}
-.carousel-caption h3 {
-  font-size: 110%;
-}
-.display-4 {
-  font-size: 200%;
-}
-
-}
-
 
 /*---Firefox Bug Fix --*/
 .carousel-item {
@@ -166,7 +167,7 @@ figure {
   position: relative;
   width: 100%;
   height: 60%;
-  margin: 0!important;
+  margin: 0 !important;
 }
 .fixed-wrap {
   clip: rect(0, auto, auto, 0);
@@ -177,7 +178,7 @@ figure {
   height: 100%;
 }
 #fixed {
-  background-image: url('img/mac.png');
+  background-image: url("img/mac.png");
   position: fixed;
   display: block;
   top: 0;
@@ -187,12 +188,12 @@ figure {
   background-size: cover;
   background-position: center center;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   will-change: transform;
 }
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .member {
@@ -202,8 +203,6 @@ figure {
 .class {
   padding-left: 3rem;
 }
-
-
 
 /*
 Extra small (xs) devices (portrait phones, less than 576px)
@@ -221,11 +220,3 @@ Large (lg) devices (desktops, 992px and up)
 Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { ... }
 */
-
-
-
-
-
-
-
-
