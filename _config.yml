@@ -30,6 +30,7 @@ github_username: the-gizmo-dojo
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-postcss
 
 defaults:
   -
