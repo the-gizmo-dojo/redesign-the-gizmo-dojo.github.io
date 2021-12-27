@@ -4,6 +4,10 @@ module.exports = {
     '**/*.html'
   ],
   theme: {
+    fontFamily: {
+      'belleza': ['Belleza', 'Times New Roman', 'serif'],
+      'poppins': ['Poppins', 'Arial', 'sans-serif'],
+    },
     extend: {},
   },
   variants: {
