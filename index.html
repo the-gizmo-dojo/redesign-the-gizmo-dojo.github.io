@@ -1,4 +1,26 @@
 ---
-
+layout: 'wrapper'
 ---
-<p>This is home page content</p>
+<main class="relative">
+    {% include header.html %}
+    <section class="container --padding min-h-screen flex items-center">
+
+        <div class="grid grid-cols-1 md:grid-cols-7">
+            <div class="col-span-3 mr-14">
+                <h3>
+                    The Gizmo Dojo is a maker space in Broomfield Colorado. It’s a place where like-minded people interested in technology, science and business can start ventures, share tools, learn, and meet new people.
+                </h3>
+                <p class="mt-10">
+                    We are structured as a  member-operated 501(c)(3) non-profit
+                </p>
+            </div>
+            <div class="absolute top-0 right-0 w-2/5 h-screen bg-gradient-to-b from-gray-200 via-gray-100 to-white col-span-4">
+
+                <div class="absolute bg-F2F8FD w-[50vw] h-[50vh] top-[25%] right-0">
+
+                </div>
+    
+            </div>
+        </div>
+    </section>
+</main>
