@@ -53,10 +53,14 @@ a {
     &.--padding{
         @apply py-16 sm:py-20 lg:py-24;
     }
+    &.--screen-height {
+        @apply md:min-h-screen;
+    }
 }
 .image-container {
     @apply bg-F9FAFB bg-cover bg-center bg-no-repeat transition-all duration-300;
 }
+
 @screen sm {
     h1,
     h2,
@@ -80,5 +84,17 @@ a {
     }
     h5 {
         @apply text-xl;
+    }
+}
+
+@screen xl {
+    .--screen-height {
+        min-height: 95vh !important;
+    }
+}
+
+@screen 2xl {
+    .--screen-height {
+        min-height: 80vh !important;
     }
 }
