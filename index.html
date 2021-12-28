@@ -21,11 +21,15 @@ layout: 'wrapper'
             </div>
         </div>
     </section>
-    <section class="container --padding min-h-screen grid grid-cols-2 items-center gap-4">
+    <section class="container --padding lg:min-h-screen md:grid md:grid-cols-2 items-center gap-4">
+        <div class="mb-12 md:hidden overflow-x-scroll flex space-x-6">
+            <div class="h-96 image-container flex-1" style="background-image: url('/assets/images/lab-1-0.jpg')"></div>
+            <!-- <div class="h-96 image-container" style="background-image: url('/assets/images/lab-1-1.jpg')"></div> -->
+        </div>
         <div>
             <h3 class="md:w-3/4">Light machining and lab supplies</h3>
-            <p class="mt-10 md:w-1/2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <div class="mt-14 flex items-center space-x-8">
+            <p class="mt-6 md:mt-8 lg:mt-10 md:w-1/2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div class="mt-10 md:mt-12 lg:mt-14 flex items-center space-x-8">
                 <div class="flex items-center space-x-4">
                     <svg class="h-6 w-auto opacity-50 cursor-not-allowed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -39,9 +43,9 @@ layout: 'wrapper'
                 <p>1 of 8</p>
             </div>
         </div>
-        <div class="h-full grid grid-cols-2 items-center space-x-4">
-            <div class="lg:h-2/3 xl:h-[30rem] image-container" style="background-image: url('/assets/images/lab-1-0.jpg')"></div>
-            <div class="lg:h-2/5 xl:h-80 image-container" style="background-image: url('/assets/images/lab-1-1.jpg')"></div>
+        <div class="h-full hidden md:grid grid-cols-2 items-center space-x-4">
+            <div class="md:h-64 lg:h-80 xl:h-[30rem] image-container" style="background-image: url('/assets/images/lab-1-0.jpg')"></div>
+            <div class="md:h-40 lg:h-52 xl:h-80 image-container" style="background-image: url('/assets/images/lab-1-1.jpg')"></div>
         </div>
     </section>
     {% include footer.html %}
