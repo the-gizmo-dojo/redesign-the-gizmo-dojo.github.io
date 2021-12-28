@@ -43,13 +43,15 @@ p {
 }
 
 .container {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-4;
 
     &.--padding{
         @apply py-16 sm:py-20 lg:py-24;
     }
 }
-
+.image-container {
+    @apply bg-F9FAFB bg-cover bg-center bg-no-repeat transition-all duration-300;
+}
 @screen sm {
     h1,
     h2,
