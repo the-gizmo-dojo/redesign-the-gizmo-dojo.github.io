@@ -4,22 +4,23 @@ layout: 'wrapper'
 <main class="relative">
     {% include header.html %}
     <section class="container --padding min-h-screen flex items-center">
-        <div class="md:grid grid-cols-1 md:grid-cols-7 z-10">
-            <div class="md:col-span-3 xl:mr-12">
-                <h3>
-                    The Gizmo Dojo is a maker space in Broomfield Colorado. It’s a place where like-minded people interested in technology, science and business can start ventures, share tools, learn, and meet new people.
-                </h3>
-                <p class="mt-10 md:w-1/2">
-                    We are structured as a member-operated 501(c)(3) non-profit
-                </p>
+        <div class="md:w-2/5 static z-10 xl:mr-12">
+            <div class="block md:hidden mt-16 mb-10 image-container">
+                <img src="/assets/images/landing-image.jpg" alt="landing image">
             </div>
+            <h3>
+                The Gizmo Dojo is a maker space in Broomfield Colorado. It’s a place where like-minded people interested in technology, science and business can start ventures, share tools, learn, and meet new people.
+            </h3>
+            <p class="mt-6 md:mt-10 md:w-1/2">
+                We are structured as a member-operated 501(c)(3) non-profit
+            </p>
         </div>
         <div class="absolute top-0 right-0 w-2/5 h-screen bg-gradient-to-b from-gray-200 via-gray-100 to-white col-span-4">
             <div class="hidden md:block md:absolute w-[50vw] h-[55vh] top-[22.5%] right-0 image-container" style="background-image: url('/assets/images/landing-image.jpg')">
             </div>
         </div>
     </section>
-    <section class="container --padding --screen-height md:grid md:grid-cols-2 items-center gap-4">
+    <section class="-mt-2 sm:-mt-6 lg:-mt-12 container --padding-xl md:grid md:grid-cols-2 items-center gap-4">
         <div class="mb-12 md:hidden overflow-x-scroll flex space-x-6">
             <div class="h-96 image-container flex-1" style="background-image: url('/assets/images/lab-1-0.jpg')"></div>
             <!-- <div class="h-96 image-container" style="background-image: url('/assets/images/lab-1-1.jpg')"></div> -->
@@ -46,7 +47,7 @@ layout: 'wrapper'
             <div class="md:h-40 lg:h-52 xl:h-80 image-container" style="background-image: url('/assets/images/lab-1-1.jpg')"></div>
         </div>
     </section>
-    <section class="container --padding --screen-height md:grid md:grid-cols-2 items-center gap-4">
+    <section class="container --padding-xl md:grid md:grid-cols-2 items-center gap-4">
         <div class="mb-12 relative flex md:hidden items-center justify-center h-72">
             <div class="bg-FFF6F7 w-4/5 h-4/5 absolute right-0 top-0"></div>
             <div class="bg-F0FAF7 w-1/5 h-1/5 absolute left-0 bottom-0"></div>
@@ -66,7 +67,7 @@ layout: 'wrapper'
             </div>
         </div>
     </section>
-    <section class="container --padding --screen-height">
+    <section class="container --padding-xl">
         <h3 class="text-center">Membership Structure</h3>
         <div class="mt-16 sm:mt-20 lg:mt-24">
             <div class="bg-gray-50">

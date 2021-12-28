@@ -53,8 +53,8 @@ a {
     &.--padding{
         @apply py-16 sm:py-20 lg:py-24;
     }
-    &.--screen-height {
-        @apply md:min-h-screen;
+    &.--padding-xl {
+        @apply py-16 sm:py-20 md:py-24 lg:py-28 xl:py-36 2xl:py-44;
     }
 }
 .image-container {
@@ -84,17 +84,5 @@ a {
     }
     h5 {
         @apply text-xl;
-    }
-}
-
-@screen xl {
-    .--screen-height {
-        min-height: 95vh !important;
-    }
-}
-
-@screen 2xl {
-    .--screen-height {
-        min-height: 80vh !important;
     }
 }
