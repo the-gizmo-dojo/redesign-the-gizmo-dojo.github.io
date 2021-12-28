@@ -31,7 +31,8 @@ h5 {
 }
 
 label,
-p {
+p,
+a {
     @apply font-poppins leading-relaxed;
 }
 
@@ -40,6 +41,10 @@ label {
 }
 p {
     @apply text-lg text-gray-700;
+}
+
+a {
+    @apply text-base text-gray-700;
 }
 
 .container {
