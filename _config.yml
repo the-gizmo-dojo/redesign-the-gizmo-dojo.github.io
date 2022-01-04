@@ -15,6 +15,9 @@ plugins:
 
 postcss:
   cache: false
+  
+sass:
+  style: compressed
 
 defaults:
   -

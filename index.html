@@ -1,4 +1,236 @@
 ---
-
+layout: 'wrapper'
 ---
-<p>This is home page content</p>
+<main class="relative">
+    {% include header.html %}
+    <section class="container --padding min-h-screen flex items-center">
+        <div class="md:w-2/5 static z-10 xl:mr-12">
+            <div class="block md:hidden mt-16 mb-10">
+                <img class="w-full" src="/assets/images/landing-image.jpg" alt="landing image">
+            </div>
+            <h3>
+                The Gizmo Dojo is a maker space in Broomfield Colorado. It’s a place where like-minded people interested in technology, science and business can start ventures, share tools, learn, and meet new people.
+            </h3>
+            <p class="mt-6 md:mt-10 md:w-1/2">
+                We are structured as a member-operated 501(c)(3) non-profit
+            </p>
+        </div>
+        <div class="absolute top-0 right-0 w-2/5 h-screen bg-gradient-to-b from-gray-200 via-gray-100 to-white col-span-4">
+            <div class="hidden md:block md:absolute w-[50vw] h-[55vh] top-[22.5%] right-0 image-container" style="background-image: url('/assets/images/landing-image.jpg')">
+            </div>
+        </div>
+    </section>
+    <section class="-mt-2 sm:-mt-6 lg:-mt-12 container --padding-xl md:grid md:grid-cols-2 items-center gap-4">
+        <div class="mb-12 md:hidden overflow-x-scroll flex space-x-6">
+            <div class="h-96 image-container flex-1" style="background-image: url('/assets/images/lab-1-0.jpg')"></div>
+            <!-- <div class="h-96 image-container" style="background-image: url('/assets/images/lab-1-1.jpg')"></div> -->
+        </div>
+        <div>
+            <h3 class="md:w-3/4">Light machining and lab supplies</h3>
+            <p class="mt-6 md:mt-8 lg:mt-10 md:w-1/2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <div class="mt-10 md:mt-12 lg:mt-14 flex items-center space-x-8">
+                <div class="flex items-center space-x-4">
+                    <svg class="h-6 w-auto opacity-50 cursor-not-allowed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <svg class="h-6 w-auto cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </div>
+                <p class="text-base">1 of 8</p>
+            </div>
+        </div>
+        <div class="h-full hidden md:grid grid-cols-2 items-center space-x-4">
+            <div class="md:h-64 lg:h-80 xl:h-[30rem] image-container" style="background-image: url('/assets/images/lab-1-0.jpg')"></div>
+            <div class="md:h-40 lg:h-52 xl:h-80 image-container" style="background-image: url('/assets/images/lab-1-1.jpg')"></div>
+        </div>
+    </section>
+    <section class="container --padding-xl md:grid md:grid-cols-2 items-center gap-4">
+        <div class="mb-12 relative flex md:hidden items-center justify-center h-72">
+            <div class="bg-FFF6F7 w-4/5 h-4/5 absolute right-0 top-0"></div>
+            <div class="bg-F0FAF7 w-1/5 h-1/5 absolute left-0 bottom-0"></div>
+            <div class="p-6 flex items-center justify-center w-4/5 h-4/5 bg-FEF6E2 absolute">
+                <img class="max-h-full" src="/assets/images/illustrations/goals.png" alt="illustrations - goals">
+            </div>
+        </div>
+        <div>
+            <h3 class="md:w-3/4">Guiding principles</h3>
+            <p class="mt-6 md:mt-8 lg:mt-10 md:w-3/4">We strive to empower our members to grow and contribute to the gizmo dojo as a space and a community.  In order to do this we aim to raise the skill levels of our members and encourage honesty and bravery as members of the wider maker community.  We recognize that everyone is an individual, with different strengths, needs, and areas </p>
+        </div>
+        <div class="relative hidden md:flex items-center justify-center md:h-96 xl:h-[34rem]">
+            <div class="bg-FFF6F7 w-4/5 h-4/5 absolute right-0 top-0"></div>
+            <div class="bg-F0FAF7 w-1/5 h-1/5 absolute left-0 bottom-0"></div>
+            <div class="p-10 flex items-center justify-center w-4/5 h-4/5 bg-FEF6E2 absolute">
+                <img class="max-h-full" src="/assets/images/illustrations/goals.png" alt="illustrations - goals">
+            </div>
+        </div>
+    </section>
+    <section class="container --padding-xl">
+        <h3 class="text-center">Membership Structure</h3>
+        <div class="mt-16 sm:mt-20 lg:mt-24">
+            <div class="bg-gray-50">
+                <div class="p-6 md:p-8 lg:p-10">
+                    <div class="flex justify-between space-x-4">
+                        <div>
+                            <p class="text-gray-900 font-bold text-2xl">Standard Membership</p>
+                            <p class="mt-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="hidden md:flex text-center flex-shrink-0 flex-col justify-center">
+                            <div class="flex items-center justify-center text-5xl font-extrabold text-gray-900">
+                                <span>
+                                    $50
+                                </span>
+                                <span class="ml-3 text-xl font-medium text-gray-500">
+                                    USD
+                                </span>
+                            </div>
+                            <div class="mt-6">
+                                <a href="#" class="flex items-center justify-center px-5 py-2.5 border border-transparent text-base font-medium text-white bg-gray-800 hover:bg-gray-900">
+                                  Get Access
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10 flex items-center">
+                        <p class="flex-shrink-0 pr-4 uppercase text-gray-800">
+                          What's included
+                        </p>
+                        <div class="flex-1 border-t-2 border-gray-200"></div>
+                    </div>
+                    <ul role="list" class="mt-8 space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5">
+                        <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-auto text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="ml-3 text-base text-gray-600">
+                                1x fob
+                            </p>
+                        </li>
+        
+                        <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-auto text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="ml-3 text-base text-gray-600">
+                                Access to community tables for intraday use
+                            </p>
+                        </li>
+        
+                        <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-auto text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="ml-3 text-base text-gray-600">
+                                Access to all domains and tooling 24/7
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 md:p-8 lg:p-10 bg-gray-200 flex md:hidden text-center flex-col justify-center">
+                    <div class="flex items-center justify-center text-5xl font-extrabold text-gray-900">
+                        <span>
+                            $50
+                        </span>
+                        <span class="ml-3 text-xl font-medium text-gray-500">
+                            USD
+                        </span>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#" class="flex items-center justify-center px-5 py-2.5 border border-transparent text-base font-medium text-white bg-gray-800 hover:bg-gray-900">
+                          Get Access
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-50 mt-12 sm:mt-16 lg:mt-20">
+                <div class="p-6 md:p-8 lg:p-10">
+                    <div class="flex justify-between space-x-4">
+                        <div>
+                            <p class="text-gray-900 font-bold text-2xl">Domain Administration Donation</p>
+                            <p class="mt-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        </div>
+                        <div class="hidden md:flex text-center flex-shrink-0 flex-col justify-center">
+                            <div class="flex items-center justify-center text-5xl font-extrabold text-gray-900">
+                                <span>
+                                    $150
+                                </span>
+                                <span class="ml-3 text-xl font-medium text-gray-500">
+                                    USD
+                                </span>
+                            </div>
+                            <div class="mt-6">
+                                <a href="#" class="flex items-center justify-center px-5 py-2.5 border border-transparent text-base font-medium text-white bg-gray-800 hover:bg-gray-900">
+                                  Get Access
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10 flex items-center">
+                        <p class="flex-shrink-0 pr-4 uppercase text-gray-800">
+                          What's included
+                        </p>
+                        <div class="flex-1 border-t-2 border-gray-200"></div>
+                    </div>
+                    <ul role="list" class="mt-8 space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5">
+                        <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-auto text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="ml-3 text-base text-gray-600">
+                                Members that would like to step up their contribution to the dojo and enable themselves to contribute their knowledge and expertise to a specific domain of the dojo. Domain administrators will take personal ownership of an area with the intent of making the domain as productive and useful for dojo members as possible. 
+                            </p>
+                        </li>
+        
+                        <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-auto text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="ml-3 text-base text-gray-600">
+                                Domain administrators are encouraged to integrate any aspect of their personal business/startup and specialty equipment into their domain.
+                            </p>
+                        </li>
+        
+                        <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-auto text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                            <p class="ml-3 text-base text-gray-600">
+                                Utilization of the Dojo business address and mail service will become available for use.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="p-6 md:p-8 lg:p-10 bg-gray-200 flex md:hidden text-center flex-col justify-center">
+                    <div class="flex items-center justify-center text-5xl font-extrabold text-gray-900">
+                        <span>
+                            $150
+                        </span>
+                        <span class="ml-3 text-xl font-medium text-gray-500">
+                            USD
+                        </span>
+                    </div>
+                    <div class="mt-6">
+                        <a href="#" class="flex items-center justify-center px-5 py-2.5 border border-transparent text-base font-medium text-white bg-gray-800 hover:bg-gray-900">
+                          Get Access
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include footer.html %}
+</main>
