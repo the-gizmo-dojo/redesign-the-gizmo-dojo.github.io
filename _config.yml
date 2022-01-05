@@ -1,0 +1,27 @@
+title: The Gizmo Dojo
+email: info@thegizmodojo.com
+description: >- # this means to ignore newlines until "baseurl:"
+  The Gizmo Dojo is a maker space in Broomfield Colorado. It’s a place where like-minded people interested in technology, science and business can start ventures, share tools, learn, and meet new people.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: TheGizmoDojo
+github_username: the-gizmo-dojo
+
+permalink: /:title
+
+plugins:
+  - jekyll-feed
+  - jekyll-postcss
+
+postcss:
+  cache: false
+  
+sass:
+  style: compressed
+
+defaults:
+  -
+    scope:
+      path:
+    values: 
+      layout: "default"

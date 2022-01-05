@@ -1,5 +1,9 @@
-To Run in docker container run:
-
+# Here is a quick way to get started developing
+Clone the project using
 ```bash
-docker run -dit -p 8080:80 -v "$PWD":/usr/local/apache2/htdocs/ httpd:2.4
+npm install
+```
+and to get a development server up
+```bash
+npm run dev
 ```
