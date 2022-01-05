@@ -4,7 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ site.title }}</title>
+    <meta name="web_author" content="{{ site.title }} :: https://thegizmodojo.com/" />
+    <title>{{ site.title }}{% if page.title %}{{' | ' | append: page.title }}{% endif %}</title>
+    <meta name="description" content="{{ site.description }}" />
+    <meta name="keywords" content="{{ site.description }}">
+
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="next-head-count" content="15">
+    <meta name="twitter:site" content="{{ site.title }}{% if page.title %}{{' | ' | append: page.title }}{% endif %}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:creator" content="{{ site.title }}{% if page.title %}{{' | ' | append: page.title }}{% endif %}">
+    <meta property="og:url" content="{{ config('app.url') }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:image" content="/assets/images/social-media-thumbnails/default.png">
+    <meta name="twitter:title" content="{{ site.title }}{% if page.title %}{{' | ' | append: page.title }}{% endif %}">
+    <meta property="og:title" content="{{ site.title }}{% if page.title %}{{' | ' | append: page.title }}{% endif %}">
+    <meta name="twitter:image" content="/assets/images/social-media-thumbnails/default.png">
+
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body class="font-poppins">
