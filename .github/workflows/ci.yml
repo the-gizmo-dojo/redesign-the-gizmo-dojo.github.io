@@ -1,28 +1,22 @@
-name: "Dojo ghpages build and deploy"
+name: "Dojo Test Suites"
 
 on:
-   push:
-     branches: [ master ]
-   pull_request:
-     branches: [ master ]
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
-   build_and_deploy:
+  build_and_deploy:
 
-     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-     steps:
-     - uses: actions/checkout@v2
-     - name: Install Dependencies
-       run: npm install
-     - name: Build the site in the jekyll/builder container
-       run: |
-         docker run \
-         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-     - name: Deploy to GitHub Pages
-       uses: crazy-max/ghaction-github-pages@v2.5.0
-       with:
-        build_dir: _site/
-       env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install Dependencies
+      run: npm install
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
