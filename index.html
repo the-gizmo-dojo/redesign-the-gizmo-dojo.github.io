@@ -21,32 +21,115 @@ title: "Home"
             </div>
         </div>
     </section>
-    <section class="-mt-2 sm:-mt-6 lg:-mt-12 container --padding-xl md:grid md:grid-cols-2 items-center gap-4">
-        <div class="mb-12 md:hidden overflow-x-scroll flex space-x-6">
-            <div class="h-96 image-container flex-1" style="background-image: url('/assets/images/lab-1-0.jpg')"></div>
-            <!-- <div class="h-96 image-container" style="background-image: url('/assets/images/lab-1-1.jpg')"></div> -->
+    <section 
+        x-data="{ workShops: [
+            { 
+                title: 'Welding shop', 
+                description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+            },
+            { 
+                title: 'Light machining and lab supplies', 
+                description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' 
+            },
+            { 
+                title: 'Common area', 
+                description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' 
+            },
+            { 
+                title: 'Mechanic area', 
+                description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' 
+            },
+            { 
+                title: 'Fully decked out electronics lab', 
+                description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' 
+            },
+            { 
+                title: 'Wood shop', 
+                description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' 
+            },
+            { 
+                title: 'Electronic Tools and supplies', 
+                description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' },
+            { 
+                title: 'Machining area', 
+                description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.' 
+            }
+        ], currentIndex: 0}"
+        class="-mt-2 sm:-mt-6 lg:-mt-12 container --padding-xl md:grid md:grid-cols-2 items-center gap-4">
+        <div class="mb-12 md:hidden">
+            <template x-for="(workShop, index) in workShops" :key="index">
+                <div 
+                    x-show="currentIndex === index"
+                    x-data="{ current: 0, count: 2, size: 100 }"
+                    x-transition:enter="transition ease-out duration-1000" 
+                    x-transition:enter-start="opacity-0 transform scale-90" 
+                    x-transition:enter-end="opacity-100 transform scale-100"
+                    class="relative">
+                    <div class="flex overflow-hidden">
+                        <div class="flex-none w-full transition-all duration-1000 h-[25rem] image-container"
+                            :style="`transform: translateX(${current}%)`">
+                            <img class="w-full" :src="`/assets/images/laboratories/${index}-0.jpeg`" alt="Dojo Laboratory Image">
+                        </div>
+                        <div class="flex-none w-full transition-all duration-1000 h-[25rem] image-container"
+                            :style="`transform: translateX(${current}%)`">
+                            <img class="w-full" :src="`/assets/images/laboratories/${index}-1.jpeg`" alt="Dojo Laboratory Image">
+                        </div>
+                    </div>
+        
+                    <div class="absolute bottom-4 inset-x-0">
+                        <div class="flex space-x-6 justify-center items-center">
+                            <svg @click="0 > current ? current += 100 : null " class="h-6 w-auto" :class="{ 'opacity-50' : -((count - 1) * size) < current }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                            <svg @click="-((count - 1) * size) < current ? current -= 100 : null " class="h-6 w-auto" :class="{ 'opacity-50' :  0 > current  }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </template>
         </div>
         <div>
-            <h3 class="md:w-3/4">Light machining and lab supplies</h3>
-            <p class="mt-6 md:mt-8 lg:mt-10 md:w-1/2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <template x-for="(workShop, index) in workShops" :key="index">
+                <div
+                    x-show="currentIndex === index"
+                    x-transition:enter="transition ease-out duration-1000" 
+                    x-transition:enter-start="opacity-0 transform scale-90" 
+                    x-transition:enter-end="opacity-100 transform scale-100" >
+                    <h3 class="md:w-3/4" x-text="workShop.title"></h3>
+                    <p class="mt-6 md:mt-8 lg:mt-10 md:w-1/2" x-text="workShop.description"></p>
+                </div>
+            </template>
+           
             <div class="mt-10 md:mt-12 lg:mt-14 flex items-center space-x-8">
                 <div class="flex items-center space-x-4">
-                    <svg class="h-6 w-auto opacity-50 cursor-not-allowed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg @click="currentIndex > 0 ? currentIndex -= 1 : null" class="h-6 w-auto opacity-50 cursor-pointer" :class="{ 'opacity-50 !cursor-not-allowed' : currentIndex === 0 }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="19" y1="12" x2="5" y2="12"></line>
                         <polyline points="12 19 5 12 12 5"></polyline>
                     </svg>
-                    <svg class="h-6 w-auto cursor-pointer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg @click="(currentIndex + 1) < workShops.length ? currentIndex += 1 : null" class="h-6 w-auto cursor-pointer" :class="{ 'opacity-50 !cursor-not-allowed' : (currentIndex + 1) === workShops.length }" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                 </div>
-                <p class="text-base">1 of 8</p>
+                <p class="text-base">
+                    <span x-text="currentIndex + 1"></span>&nbsp;&nbsp;of&nbsp;&nbsp;<span x-text="workShops.length"></span> 
+                </p>
             </div>
         </div>
-        <div class="h-full hidden md:grid grid-cols-2 items-center space-x-4">
-            <div class="md:h-64 lg:h-80 xl:h-[30rem] image-container" style="background-image: url('/assets/images/lab-1-0.jpg')"></div>
-            <div class="md:h-40 lg:h-52 xl:h-80 image-container" style="background-image: url('/assets/images/lab-1-1.jpg')"></div>
-        </div>
+        <template x-for="(workShop, index) in workShops" :key="index">
+            <div
+                x-show="currentIndex === index"
+                x-transition:enter="transition ease-out duration-1000" 
+                x-transition:enter-start="opacity-0 transform scale-90" 
+                x-transition:enter-end="opacity-100 transform scale-100" 
+                class="h-full hidden md:grid grid-cols-2 items-center space-x-4">
+                <div class="md:h-64 lg:h-80 xl:h-[30rem] image-container" :style="`background-image: url('/assets/images/laboratories/${index}-0.jpeg')`"></div>
+                <div class="md:h-40 lg:h-52 xl:h-80 image-container" :style="`background-image: url('/assets/images/laboratories/${index}-1.jpeg')`"></div>
+            </div>
+        </template>
     </section>
     <section class="container --padding-xl md:grid md:grid-cols-2 items-center gap-4">
         <div class="mb-12 relative flex md:hidden items-center justify-center h-72">
