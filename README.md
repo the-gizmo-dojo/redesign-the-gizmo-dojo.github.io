@@ -1,5 +1,4 @@
-# Here is a quick way to get started developing
-Clone the project using
+# You need Jekyll and npm for development environment
 ```bash
 npm install
 ```
