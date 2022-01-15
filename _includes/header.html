@@ -1,12 +1,19 @@
-<header class="z-30 fixed inset-x-0 top-[5%]">
+<div class="hidden md:block h-10">
+
+</div>
+<header x-data="{ atTop: true, isModalOpen: false }" 
+x-on:scroll.window="atTop = (window.pageYOffset > 100) ? false : true; "
+x-on:keydown.escape=" isModalOpen = isModalOpen ? false : true" 
+:class="{ 'bg-white shadow-md': ! (atTop || isModalOpen) }" 
+class="py-2 sticky inset-x-0 top-0 z-40 bg-white shadow-md">
     <div class="container py-4 flex justify-between">
         <a href="/">
             <svg class="h-6 lg:h-8 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 221 35">
                 <text id="The_Gizmo_Dojo" data-name="The Gizmo Dojo" transform="translate(0 28)" font-size="30" font-family="TiemposHeadline-Medium, Tiempos Headline" font-weight="500"><tspan x="0" y="0">The Gizmo Dojo</tspan></text>
             </svg>
         </a>
-        <a href="/about">
-            <p>About</p>
+        <a class="text-base md:text-lg" href="/about">
+            About
         </a>
     </div>
 </header>
